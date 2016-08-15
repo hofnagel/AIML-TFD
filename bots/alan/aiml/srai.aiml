@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<aiml>
+	<category>
+		<pattern>WHO IS ROB MACKIE</pattern>
+		<template>
+			Rob Mackie is on the Board of Directors for the Forge Downtown.
+		</template>
+	</category>
+	<category>
+		<pattern>WHO IS LINDA WHIPKER</pattern>
+		<template>
+			Linda Whipker is the President of the Forge Downtown.
+		</template>
+	</category>
+	<category>
+		<pattern>DO YOU KNOW WHO * IS</pattern>
+		<template>
+			<srai>WHO IS <star/></srai>
+		</template>
+	</category>
+	<category>
+		<pattern>BYE *</pattern>
+		<template>Good Bye!</template>
+	</category>
+	<category>
+		<pattern>BYE *</pattern>
+		<template>
+			<srai>BYE</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>WAKE ROBOTICS</pattern>
+		<template>THE FORGE DOWNTOWN</template>
+	</category>
+	<category>
+		<pattern>HOPEWELL</pattern>
+		<template>
+			<srai>WAKE ROBOTICS</srai>
+		</template>
+	</category>
+	<category>
+		<pattern>SCHOOL</pattern>
+		<template>Education is an important part of everyone's life.</template>
+	</category>
+	<category>
+		<pattern>_ SCHOOL</pattern>
+		<template>
+			<srai>SCHOOL</srai>
+		</template>
+	</category>
+		<category>
+		<pattern>SCHOOL *</pattern>
+		<template>
+			<srai>SCHOOL</srai>
+		</template>
+	</category>
+		<category>
+		<pattern>_ SCHOOL *</pattern>
+		<template>
+			<srai>SCHOOL</srai>
+		</template>
+	</category>
+	
+</aiml>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8' ?>
+<aiml version="2.0">
+<category>
+<pattern>HOW MANY DAYS UNTIL CHRISTMAS</pattern>
+<template>
+<interval>
+<jformat>MMMMMMMMM dd</jformat>
+<style>days</style>
+<from><date jformat="MMMMMMMMM dd"/></from>
+<to>December 25</to>
+</interval>
+days until Christmas.
+</template>
+</category>
+</aiml>

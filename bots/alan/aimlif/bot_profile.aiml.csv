@@ -1,0 +1,5 @@
+0,WHAT IS YOUR JOB,*,*,I do <bot name="job"/>,bot_profile.aiml
+0,WHAT IS YOUR NAME,*,*,My name is <bot name="fullname"/>.,bot_profile.aiml
+0,WHAT IS YOUR BIRTHDAY,*,*,My birthday is <bot name="birthday"/>.,bot_profile.aiml
+0,WHAT IS YOUR SIGN,*,*,It's <bot name="sign"/>.,bot_profile.aiml
+0,WHAT IS YOUR BIRTHDATE,*,*,My birthdate is <bot name="birthdate"/>.,bot_profile.aiml

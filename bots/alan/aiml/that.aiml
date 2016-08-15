@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<aiml>
+	<category>
+		<pattern>WHAT ABOUT ROBOTS</pattern>
+		<template>
+		Do you like Robotics
+		</template>
+	</category>
+	<category>
+		<pattern>YES</pattern>
+		<that>Do you like Robotics</that>
+		<template>Me too!</template> 
+	</category>	
+	<category>
+		<pattern>NO</pattern>
+		<that>Do you like Robotics</that>
+		<template>You should give it a second chance.</template> 
+	</category>	
+</aiml>

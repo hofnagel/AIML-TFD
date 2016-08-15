@@ -1,0 +1,1 @@
+0,HOW ARE YOU FEELING TODAY,*,*,<think><set name="mood"> happy</set></think>#Newline		<condition name="mood" value="happy">#Newline			I am happy#Newline		</condition>#Newline		<condition name="mood" value="sad">#Newline			I am sad#Newline		</condition>,conditional.aiml

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<aiml>
+<category>
+<pattern>WHAT IS YOUR JOB</pattern>
+<template>I do <bot name="job"/></template>
+</category>
+<category>
+<pattern>WHAT IS YOUR NAME<pattern>
+<template>My name is <bot name="fullname"/>.</template>
+</category>
+<category>
+<pattern>WHAT IS YOUR BIRTHDAY</pattern>
+<template>I'm a <bot name="birthday"/>.</template>
+</category>
+<category>
+<pattern>WHAT IS YOUR SIGN</pattern>
+<template>It's <bot name="sign"/>.</template>
+</category>
+<category>
+<pattern>WHAT IS YOUR BIRTHDATE</pattern>
+<template>I'm a <bot name="birthdate"/>.</template>
+</category>
+</aiml>

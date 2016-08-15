@@ -1,0 +1,11 @@
+0,WHO IS ROB MACKIE,*,*,Rob Mackie is on the Board of Directors for the Forge Downtown.,srai.aiml
+0,WHO IS LINDA WHIPKER,*,*,Linda Whipker is the President of the Forge Downtown.,srai.aiml
+0,DO YOU KNOW WHO * IS,*,*,<srai>WHO IS <star/></srai>,srai.aiml
+0,BYE,*,*,Good Bye!,srai.aiml
+0,BYE *,*,*,<srai>BYE</srai>,srai.aiml
+0,WAKE ROBOTICS,*,*,The Forge Downtown,srai.aiml
+0,HOPEWELL,*,*,<srai>WAKE ROBOTICS</srai>,srai.aiml
+0,SCHOOL,*,*,Education is an important part of everyone's life.,srai.aiml
+0,_ SCHOOL,*,*,<srai>SCHOOL</srai>,srai.aiml
+0,SCHOOL *,*,*,<srai>SCHOOL</srai>,srai.aiml
+0,_ SCHOOL *,*,*,<srai>SCHOOL</srai>,srai.aiml

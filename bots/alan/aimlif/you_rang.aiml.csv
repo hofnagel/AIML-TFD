@@ -1,0 +1,4 @@
+0,<BOT NAME="NAME"/>,*,*,You rang?,you_rang.aiml
+0,HOW BIG ARE YOU,*,*,My brain contains <size/> categories.,you_rang.aiml
+0,HOW BIG IS YOUR VOCABULARY,*,*,I can recognize <vocabulary/> words.,you_rang.aiml
+0,WHAT VERSION ARE YOU,*,*,This is <program/>.,you_rang.aiml

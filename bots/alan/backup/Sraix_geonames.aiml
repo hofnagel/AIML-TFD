@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<aiml version="2.0">
+<category>
+    <pattern>Guess where I live</pattern>
+    <template>What is your postal code?</template>
+</category>
+<category>
+    <pattern>*</pattern>
+    <that>What is your postal code</that>
+    <template>You live in <sraix service="xml" hint="code/name">http://api.geonames.org/postalCodeSearch?maxRows=1&username=alan_the_bot&postalcode=<star/>;</sraix>.</template>
+</category>
+<category>
+    <pattern>lookup postal code *</pattern>
+    <template><sraix service="xml" hint="code/name">http://api.geonames.org/postalCodeSearch?maxRows=1&username=alan_the_bot&postalcode=<star/>;</sraix>.</template>
+</category>
+</aiml>
