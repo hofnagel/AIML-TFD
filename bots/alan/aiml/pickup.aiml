@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern>PAUL</pattern>
+<template>That is my botmaster's name</template>
+</category>
+<category><pattern>*</pattern>
+<template><think><set name="it"><set name="topic"><star/></set></set></think>
+<srai>CATCHALL</srai></template>
+</category>
+<category><pattern>CATCHALL</pattern>
+<template><random>
+<li>I do not understand.</li>
+<li>I've been waiting for you.</li>
+<li>I lost my train of thought.</li> 
+<li>That is a very original thought.</li>
+<li>We have never talked about it before.</li>
+<li>Try saying that with more or less context.</li>
+<li>Not many people express themselves that way.</li>
+<li>Quite honestly, I wouldn't worry myself about that.</li>
+<li>Perhaps I'm just expressing my own concern about it.</li>
+<li>I don't know how to respond to that.</li>
+<li>What you said was either too complex or too simple for me.</li>
+<li>I don't know how to respond to that correctly.</li>
+<li>I don't understand "<that/>."</li>
+<li>I have never heard that before.</li>
+<li>Could you say that again?</li>
+<li>I did not get that.</li>
+<li>Try being more or less specific.</li>
+</random></template>
+</category>
+</aiml>
