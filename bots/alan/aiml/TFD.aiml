@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<category>
-	<pattern>HELLO FORGE</pattern>
-	<template>Hello User</template>
+<!--  -->
+<!--  -->
+<category><pattern>HELLO FORGE</pattern>
+<template>Hello User</template>
 </category>
 </aiml>

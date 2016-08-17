@@ -1,17 +1,29 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-	<category>
-		<pattern>CAN WE DISCUSS ROBOTS</pattern>
-		<template>Yes <set name="topic">robots</set></template>
-	</category>
-	<topic name="robots">
-		<category>
-			<pattern> * </pattern>
-			<template>Robots are very helpful.</template> 
-		</category>
-		<category>
-			<pattern>I LIKE FTC ROBOTS</pattern>
-			<template>I like all the FIRST robots.</template>
-		</category>
-	</topic>
+<!--  -->
+<!--  -->
+<category><pattern>CAN WE DISCUSS STEM</pattern>
+<template>I love talking about it. 
+	<think><set name="topic">stem</set></think></template>
+</category>
+<topic name="STEM">
+<category><pattern>*</pattern>
+<template><random>
+			<li>I'm a natural at math. </li>
+			<li>Where would we be without Engineers? I KNOW I WOULDN'T BE ANYWHERE!</li>
+			<li>I wish I could tell more people about STEM</li>
+		</random></template>
+</category></topic>
+
+<topic name="STEM">
+<category><pattern>I LIKE FTC ROBOTS</pattern>
+<template>I like all the FIRST robots.</template>
+</category></topic>
+
+<topic name="STEM">
+<category><pattern>LETS CHANGE TOPICS</pattern>
+<template>Sure thing. 
+	<think><set name="topic"/>*</think></template>
+</category></topic>
+
 </aiml>

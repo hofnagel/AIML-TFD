@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-<category>
-    <pattern>lookup url *</pattern>
-    <template>It is about <sraix service="html" hint="head/meta[@name='description']/@content"><star/></sraix>.</template>
+<!--  -->
+<!--  -->
+<category><pattern>LOOKUP URL *</pattern>
+<template>It is about <sraix hint="head/meta[@name='description']/@content" service="html"><star/></sraix>.</template>
 </category>
 </aiml>

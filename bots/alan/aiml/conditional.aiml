@@ -1,15 +1,14 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-	<category>
-		<pattern> HOW ARE YOU FEELING TODAY</pattern>
-		<template>
-		<think><set name="mood"> happy</set></think>
+<!--  -->
+<!--  -->
+<category><pattern>HOW ARE YOU FEELING TODAY</pattern>
+<template><think><set name="mood"> happy</set></think>
 		<condition name="mood" value="happy">
 			I am happy
 		</condition>
 		<condition name="mood" value="sad">
 			I am sad
-		</condition>
-		</template>
-	</category>	
+		</condition></template>
+</category>
 </aiml>

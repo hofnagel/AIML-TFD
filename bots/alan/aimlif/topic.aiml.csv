@@ -1,3 +1,4 @@
-0,CAN WE DISCUSS ROBOTS,*,*,Yes <set name="topic">robots</set>,topic.aiml
-0,*,*,ROBOTS,Robots are very helpful.,topic.aiml
-0,I LIKE FTC ROBOTS,*,ROBOTS,I like all the FIRST robots.,topic.aiml
+0,CAN WE DISCUSS STEM,*,*,I love talking about it. #Newline	<think><set name="topic">stem</set></think>,topic.aiml
+0,*,*,STEM,<random>#Newline			<li>I'm a natural at math. </li>#Newline			<li>Where would we be without Engineers? I KNOW I WOULDN'T BE ANYWHERE!</li>#Newline			<li>I wish I could tell more people about STEM</li>#Newline		</random>,topic.aiml
+0,I LIKE FTC ROBOTS,*,STEM,I like all the FIRST robots.,topic.aiml
+0,LETS CHANGE TOPICS,*,STEM,Sure thing. #Newline	<think><set name="topic"/>*</think>,topic.aiml

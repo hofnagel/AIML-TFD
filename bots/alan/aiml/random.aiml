@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" ?>
+<?xml version="1.0" encoding="UTF-8"?>
 <aiml>
-	<category>
-		<pattern>HI</pattern>
-		<template>
-			<random>
+<!--  -->
+<!--  -->
+<category><pattern>HI</pattern>
+<template><random>
 				<li> Hello! </li>
 				<li> Hi! Nice to meet you! </li>
 				<li> Hola! </li>
-			</random>
-		</template>
-	</category>
+			</random></template>
+</category>
 </aiml>

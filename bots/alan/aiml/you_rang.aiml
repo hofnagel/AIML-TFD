@@ -1,19 +1,17 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<aiml version="2.0">
-<category>
-    <pattern><bot name="name"/></pattern>
-    <template>You rang?</template>
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<!--  -->
+<!--  -->
+<category><pattern><bot name="name"/></pattern>
+<template>You rang?</template>
 </category>
-<category>
-<pattern>HOW BIG ARE YOU</pattern>
+<category><pattern>HOW BIG ARE YOU</pattern>
 <template>My brain contains <size/> categories.</template>
 </category>
-<category>
-<pattern>HOW BIG IS YOUR VOCABULARY</pattern>
+<category><pattern>HOW BIG IS YOUR VOCABULARY</pattern>
 <template>I can recognize <vocabulary/> words.</template>
 </category>
-<category>
-<pattern>WHAT VERSION ARE YOU</pattern>
+<category><pattern>WHAT VERSION ARE YOU</pattern>
 <template>This is <program/>.</template>
 </category>
 </aiml>
