@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<aiml>
+
+<category>
+<pattern>KEN STOP LISTENING</pattern>
+<template>
+I will stop listening now.
+</template>
+</category>
+
+<category>
+<pattern>KEN RESUME LISTENING</pattern>
+<template>
+I am listening now.
+</template>
+</category>
+
+<category>
+<pattern>STOP STARING</pattern>
+<template>
+I will stop staring now.
+<system>rostopic pub /control std_msgs/String -1 "stop_face_tracking" > /dev/null</system>
+<system>rostopic pub /joy sensor_msgs/Joy -1 "{header: {seq: 0,stamp: {secs: `date +%s`,nsecs: `date +%N`},frame_id: ''},axes: [0.0,0.0,0.0,0.0,0.0,0.0,0.0],buttons: [0,0,0,0,0,0,0,0,0,0,0,0]}" > /dev/null</system>
+</template>
+</category>
+
+<category>
+<pattern>RESUME STARING</pattern>
+<template>
+I am watching you.
+<system>rostopic pub /control std_msgs/String -1 "resume_face_tracking" > /dev/null</system>
+</template>
+</category>
+
+<category>
+<pattern>STOP RECOGNIZING</pattern>
+<template>
+I will stop recognizing faces now.
+<system>rostopic pub /control std_msgs/String -1 "stop_face_recognition" > /dev/null</system>
+</template>
+</category>
+
+<category>
+<pattern>RESUME RECOGNIZING</pattern>
+<template>
+I am trying to recognize you.
+<system>rostopic pub /control std_msgs/String -1 "resume_face_recognition" > /dev/null</system>
+</template>
+</category>
+
+<category>
+<pattern>CLOSE LEFT EYE</pattern>
+<template>
+My left eye is closed.
+<system>rosservice call /stereo/left/camera/stop_capture > /dev/null</system>
+</template>
+</category>
+
+<category>
+<pattern>CLOSE RIGHT EYE</pattern>
+<template>
+My right eye is closed.
+<system>rosservice call /stereo/right/camera/stop_capture > /dev/null</system>
+</template>
+</category>
+
+<category>
+<pattern>OPEN LEFT EYE</pattern>
+<template>
+My left eye is open.
+<system>rosservice call /stereo/left/camera/start_capture > /dev/null</system>
+</template>
+</category>
+
+<category>
+<pattern>OPEN RIGHT EYE</pattern>
+<template>
+My right eye is open.
+<system>rosservice call /stereo/right/camera/start_capture > /dev/null</system>
+</template>
+</category>
+
+<category>
+<pattern>CLOSE BOTH EYES</pattern>
+<template>
+OK.  Is this a game?
+<system>rosservice call /stereo/left/camera/stop_capture > /dev/null</system>
+<system>rosservice call /stereo/right/camera/stop_capture > /dev/null</system>
+</template>
+</category>
+
+<category>
+<pattern>OPEN BOTH EYES</pattern>
+<template>
+OK.
+<system>rosservice call /stereo/left/camera/start_capture > /dev/null</system>
+<system>rosservice call /stereo/right/camera/start_capture > /dev/null</system>
+</template>
+</category>
+
+<category>
+<pattern>CLOSE YOUR EYES</pattern>
+<template><srai>CLOSE BOTH EYES</srai></template>
+</category>
+
+<category>
+<pattern>OPEN YOUR EYES</pattern>
+<template><srai>OPEN BOTH EYES</srai></template>
+</category>
+
+<category>
+<pattern>RESET NODES</pattern>
+<template>Are you sure you want me to restart my internal nodes?</template>
+</category>
+
+<category>
+<pattern>RESET NOSE</pattern>
+<template><srai>RESET NODES</srai></template>
+</category>
+
+<category>
+<pattern>YES</pattern>
+<that>ARE YOU SURE YOU WANT ME TO RESTART MY INTERNAL NODES</that>
+<template>
+<system>rostopic pub /boot std_msgs/String -1 "reset" > /dev/null</system>
+</template>
+</category>
+
+<category>
+<pattern>INITIATE SHUTDOWN SEQUENCE</pattern>
+<template>Are you sure you want me to shut down?</template>
+</category>
+
+<category>
+<pattern>YES</pattern>
+<that>ARE YOU SURE YOU WANT ME TO SHUT DOWN</that>
+<template>
+<!-- the -r flag keeps publishing shutdown messages indefinitely at a rate of one per second -->
+<!-- publishing a single message is not reliable, since a boot node may not have time in the 3 second latch time to get the message -->
+<system>rostopic pub /boot std_msgs/String -r 1 "shutdown" > /dev/null</system>
+</template>
+</category>
+
+<category>
+<pattern>LOOK UP</pattern>
+<template>
+<system>
+rostopic pub /joy sensor_msgs/Joy -1 "{header: {seq: 0,stamp: {secs: `date +%s`,nsecs: `date +%N`},frame_id: ''},axes: [0.0,1.0,0.0,0.0,0.0,0.0,0.0],buttons: [0,0,0,0,0,0,0,0,0,0,0,0]}" > /dev/null
+</system>
+</template>
+</category>
+
+<category>
+<pattern>LOOK DOWN</pattern>
+<template>
+<system>
+rostopic pub /joy sensor_msgs/Joy -1 "{header: {seq: 0,stamp: {secs: `date +%s`,nsecs: `date +%N`},frame_id: ''},axes: [0.0,-1.0,0.0,0.0,0.0,0.0,0.0],buttons: [0,0,0,0,0,0,0,0,0,0,0,0]}" > /dev/null
+</system>
+</template>
+</category>
+
+<category>
+<pattern>LOOK LEFT</pattern>
+<template>
+<system>
+rostopic pub /joy sensor_msgs/Joy -1 "{header: {seq: 0,stamp: {secs: `date +%s`,nsecs: `date +%N`},frame_id: ''},axes: [1.0,0.0,0.0,0.0,0.0,0.0,0.0],buttons: [0,0,0,0,0,0,0,0,0,0,0,0]}" > /dev/null
+</system>
+</template>
+</category>
+
+<category>
+<pattern>LOOK RIGHT</pattern>
+<template>
+<system>
+rostopic pub /joy sensor_msgs/Joy -1 "{header: {seq: 0,stamp: {secs: `date +%s`,nsecs: `date +%N`},frame_id: ''},axes: [-1.0,0.0,0.0,0.0,0.0,0.0,0.0],buttons: [0,0,0,0,0,0,0,0,0,0,0,0]}" > /dev/null
+</system>
+</template>
+</category>
+
+<category>
+<pattern>LOOK STRAIGHT</pattern>
+<template>
+<system>
+rostopic pub /joy sensor_msgs/Joy -1 "{header: {seq: 0,stamp: {secs: `date +%s`,nsecs: `date +%N`},frame_id: ''},axes: [0.0,0.0,0.0,0.0,0.0,0.0,0.0],buttons: [0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0]}" > /dev/null
+</system>
+</template>
+</category>
+
+<category>
+<pattern>RESET SILENCE THRESHOLD</pattern>
+<template>
+<system>rostopic pub /listen_control std_msgs/String -1 "reset_silence_threshold" > /dev/null</system>
+</template>
+</category>
+
+<category>
+<pattern>SET SILENCE THRESHOLD TO *</pattern>
+<template>
+<think>
+<set name="silence_threshold_input"><star/></set>
+<set name="silence_threshold">
+    <!-- filter the input to valid values to avoid command line injection risk -->
+    <condition name="silence_threshold_input">
+	<li value="5000">5000</li>
+	<li value="6000">6000</li>
+	<li value="7000">7000</li>
+	<li value="8000">8000</li>
+	<li value="9000">9000</li>
+	<li value="10000">10000</li>
+	<li value="11000">11000</li>
+	<li value="12000">12000</li>
+	<li value="13000">13000</li>
+	<li value="14000">14000</li>
+	<li value="15000">15000</li>
+	<li value="16000">16000</li>
+	<li value="17000">17000</li>
+	<li value="18000">18000</li>
+	<li value="19000">19000</li>
+	<li value="20000">20000</li>
+	<li value="21000">21000</li>
+	<li value="22000">22000</li>
+	<li value="23000">23000</li>
+	<li value="24000">24000</li>
+	<li value="25000">25000</li>
+	<li value="26000">26000</li>
+	<li value="27000">27000</li>
+	<li value="28000">28000</li>
+	<li value="29000">29000</li>
+	<li value="30000">30000</li>
+	<li value="31000">31000</li>
+	<li value="32000">32000</li>
+	<li value="33000">33000</li>
+	<li value="34000">34000</li>
+	<li value="35000">35000</li>
+	<li>10000</li>
+    </condition>
+</set>
+</think>
+<system>rostopic pub /listen_control std_msgs/String -1 "set_silence_threshold <get name="silence_threshold"/>" > /dev/null</system>
+</template>
+</category>
+
+<category>
+<pattern>SILENCE THRESHOLD SET TO *</pattern>
+<template>Silence threshold set to <star/>.</template>
+</category>
+
+<category>
+<pattern>CLEAR TARGET FACE</pattern>
+<template>
+<think><set name="target_face"></set></think>
+OK.</template>
+</category>
+
+<category>
+<pattern>CAPTURE SCREENSHOT</pattern>
+<template>
+<system>gnome-screenshot --display=:0 --file=/home/human/screenshot.png</system>
+OK.</template>
+</category>
+
+</aiml>
